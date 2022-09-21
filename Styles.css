@@ -1,0 +1,89 @@
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@600&family=Merriweather&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+body {
+    font-family: Roboto, Open-sans, sans-serif;
+}
+
+h {
+    font-family: Merriweather, Martel, serif;
+}
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+:root {
+    --color-purple: #5722CD;
+    --color-blue: #4845E4;
+    --color-pink: #ED4385;
+    --color-standardtext: #0C0C0C;
+    --color-bigfloatingwords: #F2F0FF;
+    --color-backgroundprojects: #F3F6F9;
+    --color-servicetile: #7A7A7A;
+}
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+.header {
+    background-color: #4845E4;
+    padding: 30px;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+li  {
+    margin: 10px;
+}
+
+.introtext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 50px 25px 50px;
+
+}
+
+button {
+    background-color: #ED4385;
+    border-radius: 35px;
+    border-style: none;
+    padding: 18px;
+    color: white;
+    margin: 10px;
+}
+
+/* --------------- 4.2 Introduction ------------------- */
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
