@@ -13,7 +13,7 @@
 ////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Martel:wght@600&family=Merriweather&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Roboto:wght@100;300;400;500&display=swap');
 
 * {
     padding: 0;
@@ -26,7 +26,7 @@ body {
     font-family: Roboto, Open-sans, sans-serif;
 }
 
-h {
+h1, h2 {
     font-family: Merriweather, Martel, serif;
 }
 /* ------------------------------- 3. Layout --------------------------------------- */
@@ -46,10 +46,11 @@ h {
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
-.header {
-    background-color: #4845E4;
-    padding: 30px;
+header {
+    background-color: var(--color-blue);
+    padding: 0 8px;
     color: white;
+    text-align: center;
 }
 
 nav {
@@ -60,30 +61,240 @@ nav {
 ul {
     list-style-type: none;
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
 }
 
 li  {
-    margin: 10px;
+    margin: 15px 20px;
+    font-size: 14px;
+    font-weight: 300;
 }
 
 .introtext {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 25px 50px 25px 50px;
-
+    margin: 60px 180px 30px 180px;
+    /*dit moet denk ik relative vs absolute zijn*/
 }
 
-button {
-    background-color: #ED4385;
+h1 {
+    margin-bottom: 20px;
+}
+.introtexth3 {
+    font-weight: 300;
+}
+
+.headerbutton {
+    background-color: var(--color-pink);
+    border: none;
     border-radius: 35px;
-    border-style: none;
-    padding: 18px;
+    padding: 15px 30px;
     color: white;
-    margin: 10px;
+    margin: 20px;
+    text-transform: uppercase;
+    font-size: 10px;
+    box-shadow: 0 5px 10px #4B1DAF;
+    letter-spacing: 0.05em;
 }
+
+.squiggle {
+    margin-top: 50px;
+    width: 60px; /*dit is denk ik niet de bedoeling, nog kijken hoe ik dit responsief moet maken*/
+}
+
+/*De links in de navigatiebalk linken naar hun bijbehorende gebied op de homepagina: dit noem je een jumplink. Dus als de gebruiker op "Contact Us" klikt, krijgt hij het contact-formulier-gedeelte van de homepagina te zien. Hoe je dit implementeert, kun je nalezen op EdHub (Hfst. 5.3) onder het kopje "ID selectors".*/
 
 /* --------------- 4.2 Introduction ------------------- */
 
-/* ------------------------------- 5. Media Queries -------------------------------- */
+/*
+.borderforvisibility {
+    border: 2px solid blue;
+}*/
+
+.introductory {
+    margin: 80px 180px 60px 180px;
+    text-align: center;
+    color: var(--color-purple)
+}
+
+.introductorytext {
+    padding-bottom: 25px;
+    font-size: 22px;
+}
+
+.standardtext {
+    color: var(--color-standardtext);
+    font-size: 13px;
+    margin-top: 55px;
+    font-weight: 400;
+}
+
+a:link {
+    color: var(--color-purple);
+    text-decoration: none;
+}
+
+/* ------------------------------- 5. Work -------------------------------- */
+.backgroundsectionwork {
+    background-color: var(--color-backgroundprojects);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.backgroundsectionwork article:nth-child(even) {
+    flex-direction: row-reverse;
+    /*hoe krijg ik de tekst Variety nu op de juiste plek..*/
+}
+
+.work {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px 20px;
+    align-items: center;
+    max-width: 1400px;
+    padding: 20px;
+}
+
+.workpicture {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.image-wrapper {
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.squigglework {
+    margin-top: 30px;
+    width: 40px;
+}
+
+.worktext {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 300px;
+    flex-shrink: 0;
+    padding: 20px;
+    margin: 10px 80px 10px 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.viewproject {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bolder;  /*waarom werkt dit niet?*/
+    letter-spacing: 0.1em;
+}
+
+.topbottommargin {
+    margin: 16px 0;  /*kan dit handiger worden opgelost dmv space-between?*/
+}
+
+/*Services*/
+.services {
+    display: flex;
+    flex-flow: wrap row;
+    padding: 40px;
+    justify-content: space-around;
+}
+
+.servicebox {
+    flex-basis: 30%;
+    padding: 28px;
+    margin: 20px 10px;
+    flex-shrink: 1;
+    min-width: 250px;
+    box-shadow: 0 4px 10px #d0d0d0;
+    border: 1px solid var(--color-purple);
+    font-size: 11px;
+    font-weight: lighter;
+}
+
+.icon {
+    width: 50px;
+}
+
+.serviceheader {
+    color: var(--color-purple);
+    margin: 15px 0;
+}
+
+/*form*/
+.sectionform {
+    background-color: var(--color-blue);
+    padding: 0 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.formbutton {
+    background-color: var(--color-pink);
+    border: none;
+    border-radius: 35px;
+    padding: 17px 50px;
+    color: white;
+    margin: 20px;
+    text-transform: uppercase;
+    font-size: 10px;
+    box-shadow: 0 5px 10px #4B1DAF;
+    letter-spacing: 0.05em;
+    text-align: center;
+    max-width: 130px;
+    align-self: center;
+}
+
+.divform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid purple;
+    margin: 25px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+}
+
+::placeholder {
+    font-family: Roboto, Open-sans, sans-serif;
+    padding: 10px;
+    font-size: 11px;
+}
+
+#user-message {
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+}
+
+.headersize {
+    font-size: 34px;
+    margin: 20px;
+}
+
+.psizeform {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+label {
+    margin-bottom: 25px;
+}
+
+.labelnames {
+    font-weight: 500;
+    font-size: 11px;
+}
