@@ -29,6 +29,7 @@ body {
 h1, h2 {
     font-family: Merriweather, Martel, serif;
 }
+
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
@@ -41,16 +42,20 @@ h1, h2 {
     --color-backgroundprojects: #F3F6F9;
     --color-servicetile: #7A7A7A;
 }
+
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
 header {
-    background-color: var(--color-blue);
+    background: rgb(72,69,228);
+    background: linear-gradient(90deg, rgb(75, 71, 205) 39%, rgb(83, 48, 161) 100%);
     padding: 0 8px;
     color: white;
     text-align: center;
+    width: 100%;
+    position: relative;
 }
 
 nav {
@@ -64,14 +69,14 @@ ul {
     justify-content: space-between;
 }
 
-li  {
+li {
     margin: 15px 20px;
     font-size: 14px;
     font-weight: 300;
 }
 
 .introtext {
-    margin: 60px 180px 30px 180px;
+    margin: 60px 20% 30px 20%;
     /*dit moet denk ik relative vs absolute zijn*/
 }
 
@@ -106,10 +111,19 @@ a {
     width: 60px; /*dit is denk ik niet de bedoeling, nog kijken hoe ik dit responsief moet maken*/
 }
 
+.triangle {
+    width: 100%;
+    border-left: 0px solid transparent;
+    border-right: 5000px solid transparent;
+    border-bottom: 200px solid #ffffff;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
 /* --------------- 4.2 Introduction ------------------- */
 
 .introductory {
-    margin: 80px 180px 60px 180px;
+    margin: 80px 20% 60px 20%;
     text-align: center;
     color: var(--color-purple)
 }
@@ -136,11 +150,19 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 100px 0;
+    padding-bottom: 75px;
+    position: relative;
 }
 
 .backgroundsectionwork article:nth-child(even) {
     flex-direction: row-reverse;
+
     /*hoe krijg ik de tekst Variety nu op de juiste plek...*/
+}
+
+.worktextreverse {
+    margin: 0;
 }
 
 .work {
@@ -156,6 +178,10 @@ a {
 .workpicture {
     width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.workpicturereverse {
+    margin-right: 50px;
 }
 
 .image-wrapper {
@@ -189,7 +215,7 @@ a {
 }
 
 .topbottommargin {
-    margin: 16px 0;  /*kan dit handiger worden opgelost dmv space-between?*/
+    margin: 16px 0; /*kan dit handiger worden opgelost dmv space-between?*/
 }
 
 /*Services*/
@@ -198,6 +224,17 @@ a {
     flex-flow: wrap row;
     padding: 40px;
     justify-content: space-around;
+    position: relative;
+}
+
+.services::before {
+    content: "services";
+    font-size: 200px;
+    font-weight: 500;
+    color: #f7f5ff;
+    display: block;
+    position: absolute;
+    top: -110px;
 }
 
 .servicebox {
@@ -210,6 +247,8 @@ a {
     border: 1px solid var(--color-purple);
     font-size: 11px;
     font-weight: lighter;
+    z-index: 1;
+    background-color: white;
 }
 
 .icon {
@@ -223,7 +262,8 @@ a {
 
 /*form*/
 .sectionform {
-    background-color: var(--color-blue);
+    background: rgb(72,69,228);
+    background: linear-gradient(90deg, rgb(75, 71, 205) 39%, rgb(83, 48, 161) 100%);
     padding: 0 10px;
     color: white;
     display: flex;
@@ -236,7 +276,7 @@ a {
     border-radius: 35px;
     padding: 17px 50px;
     color: white;
-    margin: 20px;
+    margin: 20px 20px 0 20px;
     text-transform: uppercase;
     font-size: 10px;
     box-shadow: 0 5px 10px #4B1DAF;
@@ -256,7 +296,7 @@ a {
 .form {
     display: flex;
     flex-direction: column;
-    margin: 25px;
+    margin: 25px 25px 0 25px;
 }
 
 input {
@@ -295,4 +335,12 @@ label {
 .labelnames {
     font-weight: 500;
     font-size: 11px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    font-size: 10px;
+    padding: 18px;
+    text-align: center;
 }
