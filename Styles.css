@@ -78,6 +78,7 @@ li  {
 h1 {
     margin-bottom: 20px;
 }
+
 .introtexth3 {
     font-weight: 300;
 }
@@ -95,19 +96,17 @@ h1 {
     letter-spacing: 0.05em;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
 .squiggle {
     margin-top: 50px;
     width: 60px; /*dit is denk ik niet de bedoeling, nog kijken hoe ik dit responsief moet maken*/
 }
 
-/*De links in de navigatiebalk linken naar hun bijbehorende gebied op de homepagina: dit noem je een jumplink. Dus als de gebruiker op "Contact Us" klikt, krijgt hij het contact-formulier-gedeelte van de homepagina te zien. Hoe je dit implementeert, kun je nalezen op EdHub (Hfst. 5.3) onder het kopje "ID selectors".*/
-
 /* --------------- 4.2 Introduction ------------------- */
-
-/*
-.borderforvisibility {
-    border: 2px solid blue;
-}*/
 
 .introductory {
     margin: 80px 180px 60px 180px;
@@ -127,9 +126,8 @@ h1 {
     font-weight: 400;
 }
 
-a:link {
+.purpletext {
     color: var(--color-purple);
-    text-decoration: none;
 }
 
 /* ------------------------------- 5. Work -------------------------------- */
@@ -142,7 +140,7 @@ a:link {
 
 .backgroundsectionwork article:nth-child(even) {
     flex-direction: row-reverse;
-    /*hoe krijg ik de tekst Variety nu op de juiste plek..*/
+    /*hoe krijg ik de tekst Variety nu op de juiste plek...*/
 }
 
 .work {
@@ -185,8 +183,9 @@ a:link {
 .viewproject {
     text-transform: uppercase;
     font-size: 10px;
-    font-weight: bolder;  /*waarom werkt dit niet?*/
+    font-weight: bolder;
     letter-spacing: 0.1em;
+    color: var(--color-purple);
 }
 
 .topbottommargin {
@@ -257,7 +256,6 @@ a:link {
 .form {
     display: flex;
     flex-direction: column;
-    border: 2px solid purple;
     margin: 25px;
 }
 
